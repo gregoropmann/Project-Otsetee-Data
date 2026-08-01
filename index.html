@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kasutustingimused ja Privaatsus - Otset.ee</title>   
+    <title>Andmeturvalisus - Otset.ee</title>    
     <link rel="stylesheet" href="style.css"> 
-    <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#4F77AA">
     <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16" />
@@ -17,15 +16,11 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Kasutustingimused ja Privaatsus - Otset.ee",
-      "description": "Otset.ee platvormi kasutustingimused, privaatsuspoliitika ja vastutuse piirangud.",
-      "url": "https://otset.ee/privaatsus.html"
+      "name": "Andmeturvalisus - Otset.ee",
+      "description": "Otset.ee andmeturvalisuse ja privaatsuse ülevaade.",
+      "url": "https://otset.ee/andmeturvalisus.html"
     }
     </script>
-
-    <style>
-        
-    </style>
 </head>
 <body>
 
@@ -36,34 +31,49 @@
                 <img src="assets/otsetee_logo.png" alt="Otsetee logo" class="logo-small">
             </a>
 
-            <h1>📋 Kasutustingimused ja Privaatsus</h1>
-            <p>Tere tulemast kasutama Otset.ee platvormi. Siit lehelt leiad ülevaate meie teenuse kasutamise tingimustest, vastutuse piirangutest ja põhimõtetest.</p>
+            <h1>🔒 Sinu andmed on kaitstud</h1>
+            <p>Otset.ee on loodud privaatsust ja läbipaistvust silmas pidades. Siit leiad lihtsa ja ausa ülevaate, kuidas meie rakendus töötab ning miks seda on turvaline kasutada.</p>
 
-            <h2>1. Platvormi olemus</h2>
-            <div><span class="badge badge-policy">Kogukondlik Algatus</span></div>
-            <p>Otset.ee on tasuta ja vabatahtlik kohaandmete kaardistamise platvorm, mille eesmärk on viia kokku kohalikud tootjad ja ostjad. Platvorm toimib pelgalt info vahendajana ega ole müügitehingute osapool.</p>
+            <h2>1. Krüpteeritud HTTPS ühendus</h2>
+            <div><span class="badge badge-secure">Täielik Krüpteering</span></div>
+            <p>Rakendust majutatakse turvalises <strong>GitHub Pages</strong> keskkonnas, mis kasutab automaatselt ametlikku <strong>HTTPS ühendust</strong> (veebiaadressi ees on tabalukk). See tagab, et mitte keegi ei saa Sinu telefoni ja rakenduse vahelist andmevahetust pealt kuulata ega võltsida.</p>
 
-            <h2>2. Müüja vastutus</h2>
-            <div><span class="badge badge-warning">Aukohustus ja Täpsus</span></div>
-            <p>Kaardile müügipunkti lisamisel kinnitab müüja, et:</p>
+            <h2>2. Google OAuth sisselogimine</h2>
+            <div><span class="badge">Turvaline Autentimine</span></div>
+            <p>Müüjana sisse logides kasutatakse ametlikku Google'i süsteemi. See tähendab:</p>
             <ul>
-                <li>Esitatud teave (asukoht, tooted, kontaktandmed, lahtiolekuajad) on tõene ja ajakohane.</li>
-                <li>Müüdav kaup vastab Eesti Vabariigis kehtivatele seadustele ja nõuetele.</li>
-                <li>Müüjal on õigus vastavas asukohas kaupa pakkuda.</li>
+                <li><strong>Me ei näe ega salvesta kunagi Sinu parooli.</strong> Sisselogimine toimub täielikult Google'i enda kontrollitud turvaaknas.</li>
+                <li>Rakendus saab Google'ilt ainult Sinu profiili avaliku nime, et kuvada kaardil punkti juures ostjatele korrektset infot (nt. "Müüja: Jaan Maasikas").</li>
             </ul>
 
-            <h2>3. Vastutuse piirang</h2>
-            <div><span class="badge">Tehingud ja Liiklusohutus</span></div>
-            <p>Otset.ee meeskond ja projekti autor ei vastuta:</p>
+            <h2>3. Firebase pilveandmebaas</h2>
+            <div><span class="badge badge-secure">Google Cloud Security</span></div>
+            <p>Andmebaasina on kasutusel Google'i reaalaja platvorm <strong>Firebase Firestore</strong>, mis toimib järgmiselt:</p>
             <ul>
-                <li>Ostja ja müüja vahel sõlmitud tehingute, kauba kvaliteedi ega arveldustega seotud vaidluste eest.</li>
-                <li>Kaardil kuvatava info võimalike ebatäpsuste või aegunud andmete eest.</li>
-                <li>Liiklusseaduse rikkumiste ega mistahes vahejuhtumite eest, mis leiavad aset müügikohta sõitmisel või seal peatumisel. Rõhutame, et liiklejad peavad alati järgima liiklusmärke ja ohutusreegleid.</li>
+                <li><strong>Müüjatele:</strong> Sinu müügikoha asukoht, valitud makseviisid, telefoninumber ja lahtiolekuajad salvestatakse andmebaasi ainult siis, kui oled aktiivselt müüki alustanud. Niipea kui vajutad "Lõpeta müük" või logid välja, kustub välkmüügi punkt andmebaasist koheselt ja jäädavalt.</li>
+                <li><strong>Ostjatele:</strong> Kui kasutad nuppu "Minu asukoht", arvutab Sinu telefon asukoha kohapeal ainult kaardi nihutamiseks. Ostjate asukohti <strong>ei salvestata andmebaasi ega jälgita kunagi</strong>.</li>
             </ul>
 
-            <h2>4. Küpsised ja andmete säilitamine</h2>
-            <div><span class="badge badge-policy">Aktiivne Privaatsus</span></div>
-            <p>Me väärtustame kasutajate privaatsust. Platvorm ei kasuta turundus- ega jälgimisküpsiseid. Kõik ajutised välkmüügi punktid kustuvad andmebaasist automaatselt niipea, kui müük lõpetatakse või müüja logib välja.</p>
+            <h2>4. Serverivaba ja puhas kood</h2>
+            <div><span class="badge">Reklaamivaba</span></div>
+            <p>Otset.ee on otseühendus tarbija ja tootja vahel. Meil ei ole tagalasse peidetud oma andmeserverit, mis koguks kasutajate ajalugu, profiile või liikumismustreid. Me ei kasuta jälitusküpsiseid ega jaga infot ühegi kolmanda osapoole või turundusfirmaga.</p>
+
+            <h2>5. Kuldse märgise eluaegne säilivus</h2>
+            <div><span class="badge badge-verified">🌟 Konto-põhine Tunnustus</span></div>
+            <p>Otset.ee tunnustusmärgis (kuldne staatus <em>"Pikaajaline koostöö Otseteega"</em>) on seotud <strong>otse Sinu isikliku Google'i konto unikaalse ID-ga</strong>, mitte konkreetse poepunkti või markeriga kaardil.</p>
+            <ul>
+                <li>Sinu investeering ja staatus on turvaliselt kaitstud. Kui Sa peatad püsikoha, logid välja, teed talvepausi või liigutad oma müügipunkti suvel täiesti uude kohta, <strong>ei lähe Sinu kuldne märgis kunagi kaduma</strong>.</li>
+                <li>Niipea kui logid uuesti sisse ja alustad müüki, tuvastab süsteem pilvest Sinu konto ID ja Sinu uus punkt muutub kaardil automaatselt ja sekundipealt jälle kuldseks!</li>
+            </ul>
+
+            <h2>6. Paindlikud ja kaasaegsed makseviisid</h2>
+            <div><span class="badge badge-payment">📲 Sularaha, Kaart või Ülekanne</span></div>
+            <p>Selleks, et teeäärne ostlemine oleks mugav nii autojuhile kui talunikule, toetab platvorm kolme makseviisi:</p>
+            <ul>
+                <li><strong>Sularaha, Kaardimaksed ja Pangaülekanne:</strong> Müüjana saad kaardile märkida täpselt need viisid, mida kohapeal aktsepteerid (sealhulgas kaasaegne pangaülekanne kohapeal nutitelefoniga).</li>
+                <li>Ostjad näevad märgistatud makseviise otse kaardipunkti infoaknas enne kohale sõitmist, mis hoiab ära olukorrad, kus sobiv maksevahend puudub.</li>
+                <li>Mingeid finantstehinguid ega pangakaartide andmeid Otset.ee platvormil ei vahendata ega salvestata – arveldamine toimub täielikult ja otse müüja ning ostja vahel.</li>
+            </ul>
 
             <div class="disclaimer-box">
                 <strong>Oluline meeldetuletus:</strong> Otset.ee on sõltumatu eraprojekt. Projektil puudub igasugune seos ettevõttega <strong>Otsetee.ee OÜ</strong>.
